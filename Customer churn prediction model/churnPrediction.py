@@ -221,7 +221,7 @@ df['NEW_TotalServices'] = (df[['PhoneService', 'InternetService', 'OnlineSecurit
 # People who buy any streaming service
 df["NEW_FLAG_ANY_STREAMING"] = df.apply(lambda x: 1 if (x["StreamingTV"] == "Yes") or (x["StreamingMovies"] == "Yes") else 0, axis=1)
 
-# Kişi otomatik ödeme yapıyor mu?
+# Does the person make automatic payments?
 df["NEW_FLAG_AutoPayment"] = df["PaymentMethod"].apply(lambda x: 1 if x in ["Bank transfer (automatic)","Credit card (automatic)"] else 0)
 
 # Average monthly payment
