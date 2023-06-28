@@ -1,4 +1,4 @@
-# #Miuul - Feature Engineering Course Case 2 (Customer churn prediction model) Business Problem: Developing a machine learning model to predict customers who are likely to churn from the company. 
+Miuul - Feature Engineering Course Case 2 (Customer churn prediction model) Business Problem: Developing a machine learning model to predict customers who are likely to churn from the company. 
 Before developing the model, it is expected to perform the necessary data analysis and feature engineering steps.
 
 Dataset Story: The Telco customer churn dataset contains information about a fictitious telecommunications company that provides home phone and internet services to 7043 customers in California during the third quarter. 
