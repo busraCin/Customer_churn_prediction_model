@@ -285,3 +285,19 @@ print(f"Auc: {round(roc_auc_score(y_pred,y_test), 2)}")
 # Precision: 0.51
 # F1: 0.58
 # Auc: 0.75
+
+
+def plot_importance(model, features, num=len(X), save=False):
+    feature_imp = pd.DataFrame({'Value': model.feature_importances_, 'Feature': features.columns})
+    print(feature_imp.sort_values("Value",ascending=False))
+    plt.figure(figsize=(10, 10))
+    sns.set(font_scale=1)
+    sns.barplot(x="Value", y="Feature", data=feature_imp.sort_values(by="Value",
+                                                                     ascending=False)[0:num])
+    plt.title('Features')
+    plt.tight_layout()
+    plt.show()
+    if save:
+        plt.savefig('importances.png')
+
+plot_importance(catboost_model, X)
